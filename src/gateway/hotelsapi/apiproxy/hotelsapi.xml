@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="hotelsapi">
+    <Basepaths>/psma-restfull</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1512463567350</CreatedAt>
+    <CreatedBy>sonali.shyam@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>PSMA-RESTFULL</DisplayName>
+    <LastModifiedAt>1512463567350</LastModifiedAt>
+    <LastModifiedBy>sonali.shyam@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>AddAuthToken</Policy>
+        <Policy>FetchAuthToken</Policy>
+        <Policy>GetAddressId</Policy>
+        <Policy>Key-Value-Map-Operations-1</Policy>
+        <Policy>Veriy-OAuth</Policy>
+        <Policy>addToken</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>openapi://association.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

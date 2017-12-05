@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="AddAuthToken" enabled="true" continueOnError="false" async="false">
+    <DisplayName>AddAuthToken</DisplayName>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="Authentication-Token">WyIxNDgiLCI5MTFlY2NhMjgzOWFlNjQ1ZjU0N2MzYTQ3ZTc3YzhiMTUwMDkzMjA1Il0.DPkYnQ.ynKkQS8H7pGYPQlcVlf2zyE3BzQ</Header>
+        </Headers>
+    </Add>
+</AssignMessage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="addToken" async="false" continueOnError="false" enabled="true">
+    <DisplayName>AddToken</DisplayName>
+    <Add>
+        <Headers>
+            <Header name="Authentication-Token">{private.authenticationToken}</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo type="request" transport="http" createNew="false"/>
+</AssignMessage>

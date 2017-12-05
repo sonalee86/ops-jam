@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables name="GetAddressId" enabled="true" continueOnError="false" async="false">
+    <DisplayName>GetAddressId</DisplayName>
+    <Properties/>
+    <QueryParam name="addressId">
+        <Pattern ignoreCase="true">{addressId}</Pattern>
+    </QueryParam>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

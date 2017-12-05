@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations name="Key-Value-Map-Operations-1" async="false" continueOnError="false" enabled="true" mapIdentifier="tokenKVM">
+    <DisplayName>FetchToken</DisplayName>
+    <Properties/>
+    <Get assignTo="private.authenticationToken">
+        <Key>
+            <Parameter>authToken</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

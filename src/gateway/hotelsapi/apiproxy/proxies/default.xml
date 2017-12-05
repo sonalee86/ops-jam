@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>verify-api-key</Name>
+            </Step>
+            <Step>
+                <Name>Veriy-OAuth</Name>
+            </Step>
+            <Step>
+                <Name>remove-query-param-apikey</Name>
+            </Step>
+            <Step>
+                <Name>Key-Value-Map-Operations-1</Name>
+            </Step>
+            <Step>
+                <Name>addToken</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="get /v1/addresses">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/addresses") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/addresses/{addressId}/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/addresses/*/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/averageEaveHeight/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/averageEaveHeight/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/centroid/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/centroid/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/elevation/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/elevation/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/footprint2d/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/footprint2d/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/footprint3d/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/footprint3d/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/maximumRoofHeight/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/maximumRoofHeight/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/roofMaterials/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/roofMaterials/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/solar/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/solar/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="get /v1/buildings/{buildingId}/swimmingPool/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/v1/buildings/*/swimmingPool/") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/psma-restfull</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
